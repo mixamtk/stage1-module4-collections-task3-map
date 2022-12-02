@@ -39,8 +39,7 @@ public class KeyValueSwapperTest {
                                 4, "Thursday",
                                 5, "Friday",
                                 6, "Saturday",
-                                7, "Sunday",
-                                10, "Friday"),
+                                7, "Sunday"),
                         Map.of("Monday", 1,
                                 "Tuesday", 2,
                                 "Wednesday", 3,
@@ -53,8 +52,7 @@ public class KeyValueSwapperTest {
 
     @ParameterizedTest(name = "swapMap_{0}_Test")
     @MethodSource(value = "testCases")
-    void swapMap(String name,
-                 Map<Integer, String> sourceMap,
+    void swapMap(Map<Integer, String> sourceMap,
                  Map<String, Integer> expectedSwappedMap) {
 
         KeyValueSwapper swapper = new KeyValueSwapper();
